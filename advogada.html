@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Laura Paulino de Souza - Advogada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+    
+    :root {
+        --primary-dark: #0A1F3A;      /* Azul marinho escuro */
+        --primary: #142850;           /* Azul naval profundo */
+        --primary-light: #27496D;     /* Azul médio */
+        --secondary: #D4AF37;         /* Dourado para acentos */
+        --secondary-dark: #B8860B;    /* Dourado escuro */
+        --light: #F8F9FA;             /* Branco neutro */
+        --dark: #0A1220;              /* Azul quase preto */
+    }
+    
+    body {
+        font-family: 'Raleway', sans-serif;
+        scroll-behavior: smooth;
+        background-color: var(--primary-dark);
+        color: var(--light);
+    }
+    
+    h1, h2, h3, h4 {
+        font-family: 'Playfair Display', serif;
+        
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(135deg, rgba(10,31,58,0.9) 0%, rgba(20,40,80,0.9) 100%);
+    }
+    
+    .service-card {
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transform: perspective(1000px) rotateY(0deg);
+        backface-visibility: hidden;
+        background: var(--primary);
+        border: 1px solid var(--primary-light);
+        color: var(--light);
+    }
+    
+    .service-card:hover {
+        transform: perspective(1000px) rotateY(10deg) translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+        position: relative;
+        transition: all 0.3s ease;
+        color: var(--light);
+    }
+    
+    .nav-link:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--secondary);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        color: var(--secondary);
+    }
+    
+    .nav-link:hover:after {
+        width: 100%;
+    }
+    
+    .active-nav:after {
+        width: 100%;
+    }
+    
+    /* Floating animation */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Pulse animation */
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .pulse:hover {
+        animation: pulse 2s infinite;
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+    }
+    
+    /* Rotating border */
+    .rotating-border {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .rotating-border::before {
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: conic-gradient(
+            transparent,
+            transparent,
+            transparent,
+            var(--secondary)
+        );
+        top: -25%;
+        left: -25%;
+        animation: rotate 4s linear infinite;
+    }
+    
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .rotating-border::after {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: var(--primary);
+        border-radius: inherit;
+    }
+    
+    /* Button hover effect */
+    .btn-hover {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background-color: var(--secondary);
+        color: var(--dark);
+        border: none;
+    }
+    
+    .btn-hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: .5s;
+        z-index: -1;
+    }
+    
+    .btn-hover:hover::before {
+        left: 100%;
+    }
+    
+    /* Leaf decoration */
+    .leaf-decoration {
+        position: absolute;
+        opacity: 0.1;
+        z-index: 0;
+    }
+    
+    /* Section divider */
+    .custom-shape-divider-bottom-1689874478 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1689874478 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+    
+    .custom-shape-divider-bottom-1689874478 .shape-fill {
+        fill: var(--primary-dark);
+    }
+
+    /* Additional elements */
+    a {
+        color: var(--secondary);
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--secondary-dark);
+    }
+
+    ::selection {
+        background: var(--secondary);
+        color: var(--dark);
+    }
+
+    .text-highlight {
+        color: var(--secondary);
+    }
+
+    .border-accent {
+        border-color: var(--secondary) !important;
+    }
+</style>
+</head>
+<body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-[var(--primary-dark)] rounded-full flex items-center justify-center text-white font-bold text-xl">LPS</div>
+                    <div class="ml-4">
+                        <h1 class="text-xl font-bold text-[var(--primary-dark)]">Dra. Laura Paulino de Souza</h1>
+                        <p class="text-sm text-gray-600">Advogada - OAB/SP 123.456</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-[var(--primary-dark)] font-medium">Início</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Sobre</a>
+                    <a href="#services" class="nav-link text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Áreas de Atuação</a>
+                    <a href="#cases" class="nav-link text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Casos de Sucesso</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Contato</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl text-[var(--primary-dark)]"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <a href="#home" class="block py-2 text-[var(--primary-dark)] font-medium">Início</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Sobre</a>
+                <a href="#services" class="block py-2 text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Áreas de Atuação</a>
+                <a href="#cases" class="block py-2 text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Casos de Sucesso</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-[var(--secondary-dark)] font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-32 pb-20 text-white relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-6xl text-[var(--primary-light)] top-10 left-10 transform rotate-45"></i>
+        <i class="fas fa-leaf leaf-decoration text-8xl text-[var(--primary-light)] bottom-20 right-20 transform -rotate-15"></i>
+        <i class="fas fa-leaf leaf-decoration text-5xl text-[var(--primary-light)] top-1/4 right-1/4 transform rotate-12"></i>
+        
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Excelência em Advocacia</h1>
+                <p class="text-xl mb-8">Dra. Laura Paulino de Souza oferece soluções jurídicas personalizadas com ética, compromisso e resultados comprovados.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-white text-[var(--primary-dark)] px-8 py-3 rounded font-bold text-center hover:bg-gray-100 transition duration-300 btn-hover pulse">Agende uma Consulta</a>
+                    <a href="#services" class="border-2 border-white px-8 py-3 rounded font-bold text-center hover:bg-white hover:text-[var(--primary-dark)] transition duration-300 btn-hover">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative floating">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full overflow-hidden shadow-2xl rotating-border">
+                        <!-- Placeholder for professional photo -->
+                        <div class="w-full h-full bg-gray-300 flex items-center justify-center relative z-10">
+                          <img 
+                              src="laulau.PNG" 
+                              alt="Foto profissional"
+                              class="w-full h-full object-cover"
+                          >
+                      </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-[var(--secondary-dark)] text-white px-4 py-2 rounded-full shadow-lg pulse z-[999]">
+                        <span class="font-bold">+15 anos</span> de experiência
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section divider -->
+        <div class="custom-shape-divider-bottom-1689874478">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-7xl text-[var(--primary-light)] top-1/3 left-10 transform -rotate-12"></i>
+        <i class="fas fa-leaf leaf-decoration text-5xl text-[var(--primary-light)] bottom-1/4 right-10 transform rotate-25"></i>
+        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary-dark)]">Sobre a Dra. Laura</h2>
+                <div class="w-24 h-1 bg-[var(--secondary)] mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center fade-in">
+                    <div class="w-64 h-64 bg-gray-100 rounded-full overflow-hidden shadow-lg rotating-border">
+                        <!-- Another professional photo placeholder -->
+                        <div class="w-full h-full bg-gray-200 flex items-center justify-center relative z-10">
+                            <i class="fas fa-gavel text-5xl text-[var(--primary-dark)]"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12 fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="text-2xl font-bold mb-6 text-[var(--primary)]">Formação e Experiência Profissional</h3>
+                    <p class="mb-6 text-lg leading-relaxed">Graduada pela Faculdade de Direito da Universidade de São Paulo (USP) com especialização em Direito Civil e Processual Civil. Pós-graduada em Direito Contratual pela Fundação Getúlio Vargas (FGV).</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)] p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-award text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-black-700">Reconhecimento</h4>
+                                <p class="text-black-700">Prêmio Excelência Jurídica 2020 pela OAB/SP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)] p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-black-700 ">Atendimento</h4>
+                                <p class="text-black-700">Mais de 500 clientes atendidos com sucesso</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)] p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-balance-scale text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-black-700">Atuação</h4>
+                                <p class="text-black-700">Foco em soluções jurídicas personalizadas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)] p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-heart text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-black-700">Valores</h4>
+                                <p class="text-black-700">Ética, transparência e compromisso</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-[var(--secondary-dark)] text-white px-8 py-3 rounded font-bold hover:bg-[var(--secondary)] transition duration-300 btn-hover pulse">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[var(--light)] relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-9xl text-[var(--primary-light)] top-10 right-10 transform rotate-15"></i>
+        <i class="fas fa-leaf leaf-decoration text-6xl text-[var(--primary-light)] bottom-20 left-20 transform -rotate-25"></i>
+        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary-dark)]">Áreas de Atuação</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Especializada em diversas áreas do Direito para oferecer a melhor assessoria jurídica</p>
+                <div class="w-24 h-1 bg-[var(--secondary)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.1s;">
+                    <div class="h-48 bg-[var(--primary-dark)] flex items-center justify-center">
+                        <i class="fas fa-home text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito Imobiliário</h3>
+                        <p class="text-gray-700 mb-4">Assessoria completa em compra e venda de imóveis, usucapião, regularização de propriedades, contratos de locação e questões condominiais.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Contratos de compra e venda</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Ações de reintegração de posse</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Regularização fundiária</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-[var(--primary)] flex items-center justify-center">
+                        <i class="fas fa-user-friends text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito de Família</h3>
+                        <p class="text-gray-700 mb-4">Atuação em divórcios, pensão alimentícia, guarda de filhos, inventários, adoções, reconhecimento e dissolução de união estável.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Divórcio consensual e litigioso</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Regulamentação de visitas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Inventário e partilha de bens</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.3s;">
+                    <div class="h-48 bg-[var(--primary-light)] flex items-center justify-center">
+                        <i class="fas fa-briefcase text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito Trabalhista</h3>
+                        <p class="text-gray-700 mb-4">Defesa dos direitos do trabalhador e assessoria a empresas em questões contratuais, rescisórias, assédio moral e acidentes de trabalho.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Reclamações trabalhistas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Defesas em processos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Assessoria preventiva</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-[var(--dark)] flex items-center justify-center">
+                        <i class="fas fa-hand-holding-usd text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito do Consumidor</h3>
+                        <p class="text-gray-700 mb-4">Defesa dos direitos do consumidor em casos de produtos defeituosos, serviços mal prestados, cobranças indevidas e publicidade enganosa.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Ações de indenização</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Defesas em reclamações</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Orientação preventiva</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.5s;">
+                    <div class="h-48 bg-[var(--primary-dark)] flex items-center justify-center">
+                        <i class="fas fa-file-contract text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito Contratual</h3>
+                        <p class="text-gray-700 mb-4">Elaboração, análise e revisão de contratos em geral, resolução de conflitos contratuais e execução de obrigações.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Contratos empresariais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Rescisão contratual</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Revisão de contratos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card fade-in" style="animation-delay: 0.6s;">
+                    <div class="h-48 bg-[var(--primary)] flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)]">Direito à Saúde</h3>
+                        <p class="text-gray-700 mb-4">Atuação em casos de planos de saúde, tratamentos médicos negados, medicamentos de alto custo e direitos do paciente.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Fornecimento de medicamentos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Tratamentos médicos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-[var(--secondary)] mr-2"></i>
+                                <span>Internações hospitalares</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases Section -->
+    <section id="cases" class="py-20 bg-white relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-8xl text-[var(--primary-light)] top-20 right-20 transform -rotate-12"></i>
+        <i class="fas fa-leaf leaf-decoration text-6xl text-[var(--primary-light)] bottom-40 left-10 transform rotate-25"></i>
+        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary-dark)]">Casos de Sucesso</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Resultados que comprovam nossa excelência e comprometimento</p>
+                <div class="w-24 h-1 bg-[var(--secondary)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-home text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso Imobiliário</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Recuperação de imóvel através de ação de reintegração de posse em 45 dias, garantindo ao cliente o retorno à sua residência.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2022</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-user-friends text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso Familiar</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Divórcio consensual concluído em 30 dias com acordo justo de partilha e pensão alimentícia, preservando os interesses dos filhos.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2021</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+                
+                <!-- Case 3 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso Trabalhista</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Indenização de R$ 150.000,00 por danos morais em caso de assédio moral no ambiente de trabalho.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2020</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+                
+                <!-- Case 4 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-hand-holding-usd text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso Consumidor</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Restituição de R$ 25.000,00 em cobranças indevidas de plano de saúde com correção monetária e honorários.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2021</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+                
+                <!-- Case 5 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-file-contract text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso Contratual</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Rescisão de contrato empresarial com indenização de R$ 80.000,00 por descumprimento de cláusulas essenciais.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2022</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+                
+                <!-- Case 6 -->
+                <div class="bg-[var(--light)] rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300 fade-in" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                            <i class="fas fa-heartbeat text-[var(--primary-dark)]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[var(--primary-dark)]">Caso de Saúde</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Conquista de tratamento médico especializado no exterior custeado pelo plano de saúde, no valor de R$ 320.000,00.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">Concluído em 2023</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">100% Sucesso</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in" style="animation-delay: 0.7s;">
+                <p class="text-lg mb-6">Estes são apenas alguns exemplos de nossos casos. Entre em contato para discutir seu caso específico.</p>
+                <a href="#contact" class="inline-block bg-[var(--secondary-dark)] text-white px-8 py-3 rounded font-bold hover:bg-[var(--secondary)] transition duration-300 btn-hover pulse">Agende uma Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-[var(--light)] relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-7xl text-[var(--primary-light)] top-20 left-20 transform rotate-15"></i>
+        <i class="fas fa-leaf leaf-decoration text-5xl text-[var(--primary-light)] bottom-40 right-10 transform -rotate-25"></i>
+        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary-dark)]">Depoimentos de Clientes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">O que nossos clientes dizem sobre nosso trabalho</p>
+                <div class="w-24 h-1 bg-[var(--secondary)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 fade-in" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <i class="fas fa-user text-3xl text-gray-500 w-full h-full flex items-center justify-center"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Eduardo</h4>
+                            <p class="text-sm text-gray-600">Empresário</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"A Dra. Laura resolveu meu problema trabalhista com maestria. Sua dedicação e conhecimento jurídico foram fundamentais para o sucesso do caso."</p>
+                    <div class="flex text-[var(--secondary)]">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <i class="fas fa-user text-3xl text-gray-500 w-full h-full flex items-center justify-center"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Paula</h4>
+                            <p class="text-sm text-gray-600">Médica</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Excelente profissional! Conseguiu a guarda dos meus filhos com muita competência e sensibilidade. Recomendo a todos que precisam de um advogado de família."</p>
+                    <div class="flex text-[var(--secondary)]">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 fade-in" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <i class="fas fa-user text-3xl text-gray-500 w-full h-full flex items-center justify-center"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto Almeida</h4>
+                            <p class="text-sm text-gray-600">Aposentado</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Depois de anos tentando resolver sozinho, a Dra. Laura recuperou meu apartamento em menos de 2 meses. Profissionalismo e eficiência incomparáveis."</p>
+                    <div class="flex text-[var(--secondary)]">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative overflow-hidden">
+        <!-- Leaf decorations -->
+        <i class="fas fa-leaf leaf-decoration text-8xl text-[var(--primary-light)] top-20 right-20 transform -rotate-15"></i>
+        <i class="fas fa-leaf leaf-decoration text-6xl text-[var(--primary-light)] bottom-40 left-10 transform rotate-25"></i>
+        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--primary-dark)]">Entre em Contato</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Estamos prontos para ajudar com suas questões jurídicas</p>
+                <div class="w-24 h-1 bg-[var(--secondary)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <h3 class="text-2xl font-bold mb-6 text-[var(--primary)]">Informações de Contato</h3>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)] p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Escritório</h4>
+                                <p class="text-black-700">Av. Paulista, 1000 - 10º andar<br>São Paulo - SP, 01310-100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)]  p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telefone</h4>
+                                <p class="text-black-700">(11) 1234-5678<br>(11) 98765-4321 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)]  p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">E-mail</h4>
+                                <p class="text-black-700">contato@laurasouzaadvogada.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start hover:bg-[var(--primary-light)] hover:bg-opacity-20 hover:text-[var(--light)]  p-3 rounded-lg transition duration-300">
+                            <div class="bg-[var(--primary-light)] p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-[var(--primary-dark)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Horário de Atendimento</h4>
+                                <p class="text-black-700">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 12h (com agendamento)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-6 text-[var(--primary)]">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-[var(--primary-light)] p-3 rounded-full text-[var(--primary-dark)] hover:bg-[var(--primary)] hover:text-white transition duration-300 pulse">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary-light)] p-3 rounded-full text-[var(--primary-dark)] hover:bg-[var(--primary)] hover:text-white transition duration-300 pulse">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary-light)] p-3 rounded-full text-[var(--primary-dark)] hover:bg-[var(--primary)] hover:text-white transition duration-300 pulse">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary-light)] p-3 rounded-full text-[var(--primary-dark)] hover:bg-[var(--primary)] hover:text-white transition duration-300 pulse">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="text-2xl font-bold mb-6 text-[var(--primary)]">Envie uma Mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+                                <option value="">Selecione um assunto</option>
+                                <option value="family">Direito de Família</option>
+                                <option value="real_estate">Direito Imobiliário</option>
+                                <option value="labor">Direito Trabalhista</option>
+                                <option value="consumer">Direito do Consumidor</option>
+                                <option value="contract">Direito Contratual</option>
+                                <option value="health">Direito à Saúde</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consent" class="mr-2">
+                            <label for="consent" class="text-gray-700">Concordo com o tratamento dos meus dados pessoais conforme a <a href="#" class="text-[var(--secondary-dark)] hover:underline">Política de Privacidade</a></label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-[var(--secondary-dark)] text-white px-6 py-3 rounded font-bold hover:bg-[var(--secondary)] transition duration-300 btn-hover pulse">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full bg-gray-200 relative">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.287481899344!2d-46.66372672468796!3d-23.56156736180024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1689872631532!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-dark)] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[var(--primary-dark)] font-bold text-xl">LPS</div>
+                        <div class="ml-4">
+                            <h2 class="text-xl font-bold">Dra. Laura Paulino de Souza</h2>
+                            <p class="text-sm text-[var(--primary-light)]">Advogada - OAB/SP 123.456</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 max-w-xs text-[var(--primary-light)]">Excelência em advocacia com ética, transparência e compromisso com os clientes.</p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-[var(--primary-light)] hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#about" class="text-[var(--primary-light)] hover:text-white transition duration-300">Sobre</a></li>
+                        <li><a href="#services" class="text-[var(--primary-light)] hover:text-white transition duration-300">Áreas de Atuação</a></li>
+                        <li><a href="#cases" class="text-[var(--primary-light)] hover:text-white transition duration-300">Casos de Sucesso</a></li>
+                        <li><a href="#contact" class="text-[var(--primary-light)] hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-lg font-bold mb-4">Áreas de Atuação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-[var(--primary-light)] hover:text-white transition duration-300">Direito Imobiliário</a></li>
+                        <li><a href="#" class="text-[var(--primary-light)] hover:text-white transition duration-300">Direito de Família</a></li>
+                        <li><a href="#" class="text-[var(--primary-light)] hover:text-white transition duration-300">Direito Trabalhista</a></li>
+                        <li><a href="#" class="text-[var(--primary-light)] hover:text-white transition duration-300">Direito do Consumidor</a></li>
+                        <li><a href="#" class="text-[var(--primary-light)] hover:text-white transition duration-300">Direito Contratual</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-[var(--primary-light)]"></i>
+                            <span class="text-[var(--primary-light)]">Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-[var(--primary-light)]"></i>
+                            <span class="text-[var(--primary-light)]">(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-[var(--primary-light)]"></i>
+                            <span class="text-[var(--primary-light)]">contato@laurasouzaadvogada.com.br</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="bg-[var(--primary)] p-2 rounded-full hover:bg-[var(--primary-light)] transition duration-300 pulse">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary)] p-2 rounded-full hover:bg-[var(--primary-light)] transition duration-300 pulse">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary)] p-2 rounded-full hover:bg-[var(--primary-light)] transition duration-300 pulse">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-[var(--primary)] p-2 rounded-full hover:bg-[var(--primary-light)] transition duration-300 pulse">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-[var(--primary)] mt-12 pt-8 text-center text-[var(--primary-light)]">
+                <p>&copy; 2023 Dra. Laura Paulino de Souza - Todos os direitos reservados</p>
+                <p class="mt-2 text-sm">Desenvolvido com <i class="fas fa-heart text-[var(--secondary)]"></i> para advocacia de excelência</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[var(--secondary-dark)] text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[var(--secondary)]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-[var(--primary-dark)]', 'active-nav');
+                link.classList.add('text-gray-600');
+                
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-600');
+                    link.classList.add('text-[var(--primary-dark)]', 'active-nav');
+                }
+            });
+        });
+        
+        // Add fade-in animation to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+            fadeInObserver.observe(element);
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=SudoBrt7/advocacia" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
